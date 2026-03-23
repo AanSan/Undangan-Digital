@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Fiora & Noviyan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked-scroll">
+
+    <audio id="bg-music" loop>
+        <source src="lagu-prewed.mp3" type="audio/mpeg">
+    </audio>
+    <div id="music-control" class="music-control">
+        <span class="music-icon">🎵</span>
+    </div>
+
+    <div id="particles-container"></div>
+
+    <div id="loading-screen">
+        <p class="loading-subtitle">THE WEDDING OF</p>
+        <div class="loading-image-container">
+            <img src="foto-loading.gif" alt="Fiora & Noviyan">
+        </div>
+        <h2 class="loading-title">FIORA & NOVIYAN</h2>
+        <p class="loading-quote">POV: ur digital invitation<br>match with ur aesthetic 🫶🏼✨</p>
+        <p id="loading-progress" class="loading-text">LOADING... 0%</p>
+    </div>
+
+    <section id="cover" class="cover-section">
+        <div class="overlay"></div>
+        <div class="cover-content">
+            <p class="subtitle fade-in-1">The Wedding of</p>
+            <h1 class="title fade-in-2">Fiora <span>&</span> Noviyan</h1>
+            <div class="gold-line fade-in-3"></div>
+            <p class="date fade-in-3">Minggu, 05 Juli 2026</p>
+            <div class="guest-info fade-in-4">
+                <p>Kpd Bpk/Ibu/Saudara/i</p>
+                <h3 id="guest-name">Tamu Undangan</h3>
+                <button id="open-invitation" class="btn-elegant">BUKA UNDANGAN</button>
+            </div>
+        </div>
+    </section>
+
+    <main id="main-content" class="hidden snap-container">
+        
+        <video id="bg-video" class="video-bg" loop muted playsinline>
+            <source src="video-bg.mp4" type="video/mp4">
+        </video>
+        <div class="dark-overlay-video"></div>
+
+        <section class="snap-section">
+            <div class="container text-center fade-scroll">
+                <p class="quote-text">"Cinta tidak berupa tatapan satu sama lain, tetapi memandang keluar bersama ke arah yang sama."</p>
+                <p class="quote-source">- Antoine de Saint-Exupéry</p>
+            </div>
+        </section>
+
+        <section class="snap-section" id="bride">
+            <div class="container person-container fade-scroll">
+                <h2 class="section-title text-center">The Bride</h2>
+                <div class="photo-full-width">
+                    <img src="foto-fiora.jpg" alt="Fiora">
+                </div>
+                <div class="person-details text-center mt-20">
+                    <h3 class="name">Gabriella Fiora Ayudia Paska</h3>
+                    <p class="parents">Putri dari Bapak ... & Ibu ...</p>
+                    <a href="https://www.instagram.com/gabriellafioraa?igsh=Y2d2eWxmMHhrMzZj" target="_blank" class="ig-btn">@gabriellafioraa</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="snap-section" id="groom">
+            <div class="container person-container fade-scroll">
+                <h2 class="section-title text-center">The Groom</h2>
+                <div class="photo-full-width">
+                    <img src="foto-noviyan.jpg" alt="Noviyan">
+                </div>
+                <div class="person-details text-center mt-20">
+                    <h3 class="name">Noviyan Hogy Andika Suryanto</h3>
+                    <p class="parents">Putra dari Bapak ... & Ibu ...</p>
+                    <a href="https://www.instagram.com/aan__san?igsh=Yzh2cGxvcnN0MDN1" target="_blank" class="ig-btn">@aan__san</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="snap-section-auto" id="event-countdown">
+            <div class="container fade-scroll">
+                <h2 class="section-title text-center">Place & Time</h2>
+                
+                <div class="event-block text-left fade-scroll">
+                    <h3>Pemberkatan</h3>
+                    <p class="event-date">Minggu, 05 Juli 2026</p>
+                    <p class="event-time">12.30 WIB</p>
+                    <p class="event-address">Dusun Penggung Sari Rt. 03 Rw. 05 Desa. Nusawungu</p>
+                    <button class="btn-outline" onclick="window.open('https://maps.app.goo.gl/HnTtUM1HY1tLNw5DA', '_blank')">Lihat Lokasi</button>
+                    
+                    <div class="countdown-timer align-left mt-15">
+                        <div class="time-box"><span id="days-pemberkatan">00</span><p>Days</p></div>
+                        <div class="time-box"><span id="hours-pemberkatan">00</span><p>Hrs</p></div>
+                        <div class="time-box"><span id="minutes-pemberkatan">00</span><p>Min</p></div>
+                        <div class="time-box"><span id="seconds-pemberkatan">00</span><p>Sec</p></div>
+                    </div>
+                </div>
+
+                <div class="gold-line-small" style="margin: 30px auto;"></div>
+
+                <div class="event-block text-right fade-scroll">
+                    <h3>Resepsi</h3>
+                    <p class="event-date">Minggu, 05 Juli 2026</p>
+                    <p class="event-time">16.00 WIB</p>
+                    <p class="event-address">Dusun Penggung Sari Rt. 03 Rw. 05 Desa. Nusawungu</p>
+                    <button class="btn-outline" onclick="window.open('https://maps.app.goo.gl/kUu9RJuu2mnUpFbF7', '_blank')">Lihat Lokasi</button>
+                    
+                    <div class="countdown-timer align-right mt-15">
+                        <div class="time-box"><span id="days-resepsi">00</span><p>Days</p></div>
+                        <div class="time-box"><span id="hours-resepsi">00</span><p>Hrs</p></div>
+                        <div class="time-box"><span id="minutes-resepsi">00</span><p>Min</p></div>
+                        <div class="time-box"><span id="seconds-resepsi">00</span><p>Sec</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="snap-section-auto" id="story">
+            <div class="container text-center">
+                <h2 class="section-title fade-scroll">Our Love Story</h2>
+                
+                <div class="story-container">
+                    <div class="story-card left fade-scroll">
+                        <h3 class="story-year">2005 - 2011</h3>
+                        <p class="story-text">Satu SD tapi beda kelas dan ngga pernah ngobrol satu sama lain.</p>
+                    </div>
+                    <div class="story-card right fade-scroll">
+                        <h3 class="story-year">2014 - 2017</h3>
+                        <p class="story-text">Satu SMA beda kelas lagi, again ngga pernah ngobrol satu sama lain padahal satu organisasi juga wkwk.</p>
+                    </div>
+                    <div class="story-card left fade-scroll">
+                        <h3 class="story-year">2023</h3>
+                        <p class="story-text">Ngga sengaja ketemu joging di Manahan, saling nyapa satu sama lain.</p>
+                    </div>
+                    <div class="story-card right fade-scroll">
+                        <h3 class="story-year">2023 - 2024</h3>
+                        <p class="story-text">Masa pdkt-an yang terlalu lama wkwk dan akhirnya ditembak juga.</p>
+                    </div>
+                    <div class="story-card left fade-scroll">
+                        <h3 class="story-year">2024 - 2026</h3>
+                        <p class="story-text">Pacaran, lamaran, dan puji Tuhan mulai serius.</p>
+                    </div>
+                    <div class="story-card right fade-scroll">
+                        <h3 class="story-year">Juli 2026</h3>
+                        <p class="story-text">Akhirnya menikah sama temen SD.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="snap-section-auto" id="gallery">
+            <div class="container text-center fade-scroll">
+                <h2 class="section-title">Our Moments</h2>
+                
+                <div class="masonry-grid">
+                    <div class="masonry-item full-width fade-scroll">
+                        <video id="gallery-video" class="gallery-video" loop muted playsinline>
+                            <source src="video-bg.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="masonry-item fade-scroll"><img src="foto-1.jpg" alt="Gallery" class="zoomable"></div>
+                    <div class="masonry-item fade-scroll"><img src="foto-2.jpg" alt="Gallery" class="zoomable"></div>
+                    <div class="masonry-item fade-scroll"><img src="foto-3.jpg" alt="Gallery" class="zoomable"></div>
+                    <div class="masonry-item fade-scroll"><img src="foto-4.jpg" alt="Gallery" class="zoomable"></div>
+                    <div class="masonry-item fade-scroll"><img src="foto-5.jpg" alt="Gallery" class="zoomable"></div>
+                    <div class="masonry-item fade-scroll"><img src="foto-6.jpg" alt="Gallery" class="zoomable"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="snap-section-auto" id="gift">
+            <div class="container text-center fade-scroll">
+                <h2 class="section-title">Wedding Gift</h2>
+                <p class="wishes-subtitle">Bagi keluarga dan sahabat yang ingin memberikan tanda kasih, dapat mengirimkannya melalui rekening berikut:</p>
+                
+                <div class="gift-container">
+                    <div class="gift-card fade-scroll">
+                        <h3 class="bank-name">BCA</h3>
+                        <p class="account-number" id="rek-1">1234567890</p>
+                        <p class="account-name">a.n Gabriella Fiora Ayudia Paska</p>
+                        <button class="btn-copy" onclick="copyRekening('rek-1')">Salin Rekening</button>
+                    </div>
+                    <div class="gift-card fade-scroll">
+                        <h3 class="bank-name">Mandiri</h3>
+                        <p class="account-number" id="rek-2">0987654321</p>
+                        <p class="account-name">a.n Noviyan Hogy Andika Suryanto</p>
+                        <button class="btn-copy" onclick="copyRekening('rek-2')">Salin Rekening</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="snap-section-auto" id="wishes">
+            <div class="container text-center fade-scroll">
+                <h2 class="section-title">Wishes</h2>
+                <p class="wishes-subtitle">Berikan doa restu Anda untuk kami</p>
+                
+                <form id="wishes-form" class="fade-scroll">
+                    <input type="text" id="sender-name" placeholder="Nama Anda" required>
+                    <textarea id="sender-message" placeholder="Tulis ucapan & doa..." rows="3" required></textarea>
+                    <button type="submit" class="btn-elegant-solid">Kirim Ucapan</button>
+                </form>
+
+                <div class="wishes-slider-container fade-scroll">
+                    <div class="wishes-track" id="wishes-track">
+                        <div class="wish-slide">
+                            <h4>Asri</h4>
+                            <p>"Happy wedding mbak, lancar lancar ya ❤️"</p>
+                        </div>
+                        <div class="wish-slide">
+                            <h4>Han so hee</h4>
+                            <p>"Happy wedding to our lovebirds💖"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="footer-container text-center fade-scroll">
+                <p class="footer-text">Terima Kasih atas doa dan restunya.</p>
+                <div class="brand">Fiora & Noviyan</div>
+            </footer>
+        </section>
+
+    </main>
+
+    <div id="lightbox" class="lightbox hidden">
+        <span class="lightbox-close">×</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
